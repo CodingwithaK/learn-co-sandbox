@@ -1,0 +1,39 @@
+instructors = [
+{name: "Paul, role: "lead"}
+{name: "Maddie", role: "coach"}
+{name: "Mansour", role: "coach}
+
+
+#.each takes in a block
+#performs operations on block for
+#each element
+#returns original array
+
+instructors.each do |instructor|
+puts instructor[:name]
+end
+
+#.map  takes return value from each
+#element passed and makes new array
+#return is equal length as the
+#original 
+
+names = instructors.map do |instructors|
+instructors[:name].upcase
+end 
+
+#.find 
+#will take a conditional 
+#returns first element where
+#conditiom is true
+
+instructors.find do |instructors|
+instructor[:name] == "Maddie"
+end
+
+find all
+
+coaches = instructors.select do |instructor|
+instructor[:role] == "coach"
+end.map do |coach|
+coach[:name]
